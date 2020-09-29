@@ -2,23 +2,85 @@ header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }
 body {
-	background-color: ;
+    background-color: #00569f;
+    background: url('ptrbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 	color: #666666;
 	font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+#wrapper {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    background-color: #81d0f7;
+
+}
+
+#content {
+    margin-left: 170px;
+    min-width: 600px;
+    background-color: #ffffff;
+    padding: 12px;
+    height: 100%;
+}
+
+img {
+    float: left;
+    margin: 12px;
+    padding: 12px;
+}
+
+nav {
+    background-color: #81d0f7;
 }
 
 nav ul {
 	font-size: 1.2em;
+    list-style-type: none;
+    margin: 12px;
+    padding: 12px;
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
 }
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resort {
+    font-weight: bold;
+    color: #3399cc;
+}
+
+#content li {
+    list-style-image: url('marker.gif');
+    list-style-position: inside;
+}
+
 nav a:visited {
 	color: #344873;
 }
 nav a:hover {
 	color: #FFFFFF;
 }
+header{
+    background: url('sunset.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 h1 {
 	margin-bottom: 0;
 	padding: 10px;
+    color: #ffffff;
 }
 h2 {
 	color: #3399CC;
@@ -35,5 +97,10 @@ dt {
 }
 footer {
 	font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    margin-left: 170px;
+    min-width: 600px;
+    background-color: #ffffff;
+    padding: 12px;
 }
 
