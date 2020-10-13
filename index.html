@@ -2,7 +2,7 @@
 <!--
     @author     : Brendan Clarke
     @email      : brendan_clarke@student.uml.edu
-    @modified   : 2020-09-14
+    @modified   : 2020-10-13
     @description: Project homepage / index file for future assignments
 
 
@@ -14,28 +14,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brendan Clarke - GUI 1</title>
+  <link rel="stylesheet" href="res/css/bootstrap.min.css">
   <link rel="stylesheet" href="res/css/style.css">
-  <script src="res/js/script.js"></script>
 </head>
 <body>
-<!-- Begin Navbar -->
-<ul class="nav">
-  <li style="text-align:center"><p class="navtitle"><strong>Navigation</strong></p></li>
-  <li><hr/></li>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a  href="about.html">About</a></li>
-  <li><hr/></li>
-  <li style="text-align:center"><p class="navtitle"><strong>Assignments</strong></p></li>
-  <li><hr/></li>
-  <!-- Start Projects List -->
-  <li><a class="disabled">HW1</a></li>
-  <li><a href="#hw2">HW2</a></li>
-  <li><a href="homework/hw3/index.html">HW3</a></li>
-  <!-- End Projects List -->
-</ul>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-2">
+    <nav class="bg-light sidebar">
+    <div class="sidebar-sticky">
+    <!-- Begin Navbar -->
+    <ul class="nav flex-column nav-pills">
+      <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <span>Navigation</span>
+      </h4>
+      <li><hr/></li>
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+      <li><br/></li>
+      <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <span>Assignments</span>
+      </h4>
+      <li><hr/></li>
+      <!-- Start Projects List -->
+      <li class="nav-item"><a class="nav-link disabled">HW1</a></li>
+      <li class="nav-item"><a href="#hw2"class="nav-link">HW2</a></li>
+      <li class="nav-item"><a href="homework/hw3/index.html"class="nav-link">HW3</a></li>
+      <!-- End Projects List -->
+    </ul>
+    </div>
+    </nav>
+    </div>
 <!-- End Navbar -->
+    <div class="col-xl">
 <!-- Begin Content -->
-<div class="content">
+<div class="page-content">
   <h2>Brendan Clarke - 91.61 GUI Programming 1 - Homepage</h2>
   <p>This page will serve as the launchpoint for viewing the various projects
   and assignments required for completion of UMass Lowell's GUI 1 course.</p>
@@ -59,5 +72,11 @@
   width).</p>
 </div>
 <!-- End Content -->
+    </div>
+  <script src="res/js/jquery.js"></script>
+  <script src="res/js/feather.min.js"></script>
+  <script src="res/js/script.js"></script>
+</div>
+</div>
 </body>
 </html>

@@ -1,65 +1,25 @@
-/* styling for navigation bar */
-.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 10%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 
-/* styling for non-navigation area */
-.content {
-    margin-left: 10%;
-    padding: 1px 16px;
+.sidebar {
+    position: fixed;
+    width: 15vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.page-content {
+    margin-top: 12px;
+    width: 85vw;
     max-width: 1200px;
-}
-
-/* styling for disabled elements */
-.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-/* styling for responsive scaling of navbar and remaining area */
-@media only screen and (max-width: 1400px){
-    .nav {
-        width: 20%;
-    }
-    .content {
-        margin-left: 20%;
-    }
-}
-/* generic navbar content */
-.navitem {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-}
-
-/* generic navbar header */
-.navtitle {
-    display: block;
-    color: #000;
-    padding: 4px;
-}
-
-/* the following all style navbar links */
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li a.active {
-  background-color: #333;
-  color: white;
-}
-
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
 }
