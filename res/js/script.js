@@ -33,33 +33,40 @@ function generateTable(xs, xe, ys, ye){
     $('#d_tbl').show();
 }
 
+function parseAndGenerate(){
+    //first, get the values from the form and cast them to ints
+    //NOTE: parseInt returns NaN upon failed parsing, however due to
+    //bootstrap's input type specifiers, only valid numbers will be able
+    //to be inputted into these fields
+    var hs = parseInt($('#hstart').val()),
+        he = parseInt($('#hend').val()),
+        vs = parseInt($('#vstart').val()),
+        ve = parseInt($('#vend').val());
+    //if a provided lower-bound is more than its respective upper-bound,
+    //silently swap them
+    if(hs > he){
+        let t = hs;
+        hs = he;
+        he = t;
+    }
+    if(vs > ve){
+        let t = vs;
+        vs = ve;
+        ve = t;
+    }
+    //after our input validation, actually generate the table
+    generateTable(hs, he, vs, ve);
+}
+
 $(document).ready(function(){
     //feather (a glyph rendering library) is initialized here
     feather.replace();
-    //bind generateTable to the click event of the #genTable button
-    $('#genTable').click((e)=>{
-        //first, get the values from the form and cast them to ints
-        //NOTE: parseInt returns NaN upon failed parsing, however due to
-        //bootstrap's input type specifiers, only valid numbers will be able
-        //to be inputted into these fields
-        var hs = parseInt($('#hstart').val()),
-            he = parseInt($('#hend').val()),
-            vs = parseInt($('#vstart').val()),
-            ve = parseInt($('#vend').val());
-        //if a provided lower-bound is more than its respective upper-bound,
-        //silently swap them
-        if(hs > he){
-            let t = hs;
-            hs = he;
-            he = t;
+
+    $('#tblForm').validate({
+        submitHandler: (f)=>{
+            parseAndGenerate();
+            return false;
         }
-        if(vs > ve){
-            let t = vs;
-            vs = ve;
-            ve = t;
-        }
-        //after our input validation, actually generate the table
-        generateTable(hs, he, vs, ve);
     });
 
     //hide initially unneeded elements

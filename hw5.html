@@ -2,7 +2,7 @@
 <!--
     @author     : Brendan Clarke
     @email      : brendan_clarke@student.uml.edu
-    @modified   : 2020-10-29
+    @modified   : 2020-11-12
     @description: Homework 5
 
 
@@ -42,6 +42,7 @@
       <li class="nav-item"><a target="_blank" href="homework/hw3/index.html"class="nav-link">HW3</a></li>
       <li class="nav-item"><a target="_blank" href="https://bclarke98.github.io/uml_gui1"class="nav-link">HW4</a></li>
       <li class="nav-item"><a  href="hw5.html"class="nav-link">HW5</a></li>
+      <li class="nav-item"><a  href="hw6.html"class="nav-link">HW6</a></li>
       <!-- End Projects List -->
     </ul>
     </div>
@@ -70,7 +71,7 @@
               <td><input type="number" class="form-control bg-dark text-white" id="vend" value="5"></td>
           </tr>
           <tr>
-              <td colspan="4"><button class="btn btn-outline-secondary text-white" type="button" id="genTable">Generate</button></td>
+              <td colspan="4"><button class="btn btn-outline-secondary text-white" type="button" id="genTable"onclick="parseAndGenerate()">Generate</button></td>
           </tr>
       </tbody>
   </table>
@@ -90,6 +91,7 @@
 <!-- End Content -->
     </div>
   <script src="res/js/jquery.js"></script>
+  <script src="res/js/jquery.validate.min.js"></script>
   <script src="res/js/feather.min.js"></script>
   <script src="res/js/script.js"></script>
 </div>
